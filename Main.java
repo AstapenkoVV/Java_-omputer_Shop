@@ -44,5 +44,6 @@ public class Main {
         notebooks.add(notebook6);
         notebooks.add(notebook7);
         notebooks.add(notebook8);
+
     }
 }
