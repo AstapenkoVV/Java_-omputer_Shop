@@ -1,7 +1,7 @@
 package org.example;
 
 public class Laptop {
-    private double laptopDisplayDiagonal;
+    private int laptopDisplayDiagonal;
     private String laptopBrand;
     private String laptopCpu;
     private int laptopRam;
@@ -9,7 +9,7 @@ public class Laptop {
     private String laptopOs;
 
 
-    public Laptop(double laptopDisplayDiagonal,
+    public Laptop(int laptopDisplayDiagonal,
                   String laptopBrand,
                   String laptopCpu,
                   int laptopRam,
@@ -23,7 +23,7 @@ public class Laptop {
         this.laptopOs = laptopOs;
     }
 
-    public double getLaptopDisplayDiagonal() {
+    public int getLaptopDisplayDiagonal() {
         return laptopDisplayDiagonal;
     }
 
@@ -45,5 +45,15 @@ public class Laptop {
 
     public String getLaptopOs() {
         return laptopOs;
+    }
+
+    @Override
+    public String toString() {
+        return "Размер экрана: " + laptopDisplayDiagonal +
+                " дюймов. Бренд: " + laptopBrand +
+                ". Процессор: " + laptopCpu +
+                ". Объем оперативной памяти: " + laptopRam +
+                "Гб. Объем жесткого диска: " + laptopStorageDisk +
+                "Гб. Операционная система: " + laptopOs;
     }
 }
