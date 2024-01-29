@@ -49,6 +49,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Map<Integer, String> savedChoice = new HashMap<>();
         List<Integer> listChoiceNumber = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 0));
+        //TODO Сделать дополнительную проверку на вводимые параметры характеристик
         System.out.println("--- ФИЛЬТР ПО НОУТБУКАМ ---\n" +
                 "Выберите характеристики, соответствующие вашему запросу:\n" +
                 "1 - Размер экрана (дюймы) / 14 / 15 / 17 /\n" +
@@ -64,12 +65,12 @@ public class Main {
             choiceNumber = scanner.nextInt();
             scanner.nextLine();
             if ((listChoiceNumber.contains(choiceNumber)) && (choiceNumber != 0)) {
-                System.out.println("Введите значение характеристки №" + choiceNumber + ":");
+                System.out.println("Введите параметр характеристки №" + choiceNumber + ":");
                 choiceValue = scanner.nextLine().toUpperCase();
                 savedChoice.put(choiceNumber, choiceValue);
             }
             else {
-                System.out.println("Вы ввели неверный параметр!");
+                System.out.println("Вы ввели неверный номер характеристики!");
                 System.out.println();
             }
         }
